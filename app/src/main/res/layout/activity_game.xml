@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B0BEC5"
+    tools:context=".GameActivity">
+
+    <!-- Poäng högst upp -->
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poäng: 0"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="48dp" />
+
+    <!-- Kortet (vit rektangel med rundade hörn) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="220dp"
+        android:layout_height="320dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/tvScore"
+        app:layout_constraintBottom_toTopOf="@id/btnHigher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kort"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_gravity="center" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Knapp: Större -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnHigher"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Större"
+        android:textSize="20sp"
+        app:cornerRadius="30dp"
+        app:backgroundTint="#AB47BC"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnLower"
+        app:layout_constraintBottom_toTopOf="@id/btnNewGame"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Knapp: Mindre -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLower"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Mindre"
+        android:textSize="20sp"
+        app:cornerRadius="30dp"
+        app:backgroundTint="#AB47BC"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@id/btnHigher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnNewGame"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Knapp: Nytt spel längst ner -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNewGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nytt spel"
+        android:textSize="20sp"
+        app:cornerRadius="30dp"
+        app:backgroundTint="#E0E0E0"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="48dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
