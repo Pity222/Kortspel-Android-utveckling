@@ -67,7 +67,7 @@ class GameActivity : AppCompatActivity() {
             nextCard < currentCard
         }
 
-        // Om det blir lika – räknas som fel (vanligt i sådana spel)
+        // Om det blir lika – räknas som fel
         if (nextCard == currentCard || !correct) {
             // Fel gissning → game over
             btnHigher.isEnabled = false
