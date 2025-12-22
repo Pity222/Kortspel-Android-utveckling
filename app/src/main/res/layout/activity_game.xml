@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B0BEC5"
-    tools:context=".GameActivity">
+    tools:context=".MainActivity">
 
     <!-- Poäng högst upp -->
     <TextView
@@ -37,10 +37,11 @@
         android:layout_marginBottom="40dp">
 
         <TextView
+            android:id="@+id/tvCardText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Kort"
-            android:textSize="36sp"
+            android:textSize="40sp"
             android:textStyle="bold"
             android:textColor="#000000"
             android:layout_gravity="center" />
