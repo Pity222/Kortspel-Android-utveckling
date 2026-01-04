@@ -20,6 +20,7 @@ class GameActivity : AppCompatActivity() {
     private lateinit var btnLower: MaterialButton
     private lateinit var btnNewGame: MaterialButton
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
@@ -81,6 +82,11 @@ class GameActivity : AppCompatActivity() {
             tvCardText.text = cardName(nextCard)
         }
     }
+
+
+    // fel kod
+
+
 
     // Konvertera nummer till kortnamn
     private fun cardName(value: Int): String {
